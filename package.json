@@ -1,0 +1,23 @@
+{
+  "name": "devtinder",
+  "version": "1.0.0",
+  "description": "dev fpr developers",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nodemon src/App.js"
+  },
+  "keywords": [
+    "node",
+    "js",
+    "express",
+    "js",
+    "react",
+    "js"
+  ],
+  "author": "Krishna Vardhan",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.21.1",
+    "mongoose": "^8.8.2"
+  }
+}
