@@ -6,12 +6,17 @@ const userSchema= new mongoose.Schema(
     {
         firstName:{
             type:String,
+            required:true,
         },
         lastName:{
             type:String,
         },
         emailId:{
             type:String,
+            unique:true,
+            lowercase:true,
+            required:true,
+            trim:true,
         },
         age:
         {
@@ -24,8 +29,22 @@ const userSchema= new mongoose.Schema(
         gender:
         {
             type:String,
+        },
+        photoUrl:
+        {
+            type:String
+        },
+        about:
+        {
+            type:String,
+            default: "No bio provided",
+        },
+        skills:
+        {
+            type:[string],
+
         }
-    }
+    },{timestamps:true}
 );
 
 const User=mongoose.model("User",userSchema);
